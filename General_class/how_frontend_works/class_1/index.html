@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Frontend Works</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: rgb(45, 80, 108);
+      color: white;
+      font-family: Arial, sans-serif;
+      padding: 3rem 0;
+    }
+
+    .page-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      padding: 0;
+      justify-content: center;
+    }
+
+    .each-student {
+      list-style: none;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      width: 250px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .each-student:hover {
+      transform: scale(1.05);
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: white;
+      color: rgb(45, 80, 108);
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: lightgray;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="page-container">
+    <h1>List of My Students</h1>
+    <ul class="my-students">
+      <li class="each-student">
+        <h2>Mayor</h2>
+        <p>A strong man, who can kill a lion with his bare hands. <b>Ode Akoni</b></p>
+      </li>
+      <li class="each-student">
+        <h2>Maryam</h2>
+        <p>A cook, who cooks for kings and queens. She is endorsed by Uncle Roger. <b>Cook Queen</b></p>
+      </li>
+      <li class="each-student">
+        <h2>Tife</h2>
+        <p>A lady who is as strong as a dragon slayer. <b>Iron Lady</b></p>
+      </li>
+      <li class="each-student">
+        <h2>Terry</h2>
+        <p>He codes like he is on codeine. He prefers to code than to sleep. <b>Swagalicious Mathematician</b></p>
+      </li>
+      <li class="each-student">
+        <h2>Adewale</h2>
+        <p>The Prof of Web3.</p>
+      </li>
+      <li class="each-student">
+        <h2>Joshua</h2>
+        <p>A man from the best department in FUNAAB, the CSC department.</p>
+      </li>
+      <li class="each-student">
+        <h2>Isaac</h2>
+        <p>A man who prefers solving for expectation of X over eating pizza. <b>Our Amiable Statistician</b></p>
+      </li>
+      <li class="each-student">
+        <h2>Oluwafemi</h2>
+        <p>The Mathematician who solves problems within the blink of an eye.</p>
+      </li>
+    </ul>
+    <button onclick="highlightRandomStudent()">Highlight Random Student</button>
+  </div>
+
+  <script>
+    let 
+      students = document.querySelectorAll(".each-student"),
+      randomIndex = 0;
+
+    function highlightRandomStudent() {
+      students[randomIndex].style.color = "white";
+
+      randomIndex = Math.floor(Math.random() * students.length);
+      
+      students.forEach(student => student.style.backgroundColor = "rgba(255, 255, 255, 0.1)"); // Reset all
+      students[randomIndex].style.backgroundColor = "yellow"; // Highlight one
+      students[randomIndex].style.color = "black";
+    }
+  </script>
+</body>
+</html>
