@@ -12,24 +12,99 @@
       box-sizing: border-box;
     }
 
+    body {
+      color: rgb(39, 37, 37);
+    }
+
     .page-container {
-      background-color: red;
+      background-color: rgb(141, 136, 136);
       min-height: 100vh;
     }
     
     h1 {
       font-size: 4rem;
       font-family: Arial;
+      text-align: center;
+      /* opacity is transparency */
+      opacity: 0.8;
     }
+
+    p {
+      /* font-weight: bold; */
+      /* font-weight: 100; */
+      /* font-weight: 900; */
+      /* font-weight: bolder; */
+      /* font-weight: lighter; */
+    }
+
+    .test {
+      width: 100px;
+      height: 100px;
+      background-color: brown;
+      /* margin-bottom: 2rem; */
+      /* margin: 0 0 2rem 0; */
+      /* margin: auto; */
+      /* margin: 0 2rem; */
+      /* same applies for padding */
+      margin: 3rem;
+      margin: 3rem auto;
+    }
+
+    .test-1 {
+      background-color: rgb(43, 43, 164);
+      /* background-color: rgb(243, 6, 6); */
+    }
+
+    .test-2 {
+      background-color: rgb(56, 135, 104);
+    }
+
+    .test-3 {
+      background-color: rgb(109, 44, 89);
+    }
+
+    .test-4 {
+      background-color: rgb(67, 18, 60);
+    }
+
+    .test-5 {
+      background-color: rgb(47, 47, 76);
+    }
+
+    .hire-me {
+      /* display: inline; */
+      /* display: block; */
+      display: inline-block;
+      /* margin: 2rem auto; */
+      margin: 2rem;
+      /* the line below removes the underline */
+      text-decoration: none;
+      padding: 0.8rem 0.5rem;
+      background-color: aliceblue;
+    }
+
   </style>
 </head>
 <body>
+  <div class="test-box">
+    <div class="test test-1"></div>
+    <div class="test test-2"></div>
+    <div class="test test-3"></div>
+    <div class="test test-4"></div>
+    <div class="test test-5"></div>
+    <div class="test test-6"></div>
+  </div>
+
   <div class="page-container">
     <h1>About Me.</h1>
     <div class="card">
       <img src="" alt="Black cat">
       <p>Mr Lawal Hamzat</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit adipisci ullam nulla impedit incidunt repellat.</p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit adipisci ullam nulla impedit incidunt repellat.
+      </p>
+
+      <a class="hire-me" href="#">Hire Me</a>
     </div>
   </div>
 </body>
