@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="page-container">
+    <h1>CONTROL STRUCTURES</h1>
+  </div>
+
+  <script>
+    let log =(msg)=> {
+      console.log(msg);
+    } 
+    
+    log("Hi"); // now this means consol.log("Hi")
+
+    // First we have "If statement"
+    // eg: age validation
+    let userAge = prompt("How old are you?");
+    // if user is greater 17
+    if(userAge >= 17) {
+      // code to execute
+      log("Old enough to register");
+    }else if( userAge <= 5) {
+      log("Go and meet your mum");
+    }else if(userAge <= 10) {
+      log("Too younger to register");
+    }else if(userAge > 10) {
+      log("Come back in the next .... years");
+    }
+
+    log("Thanks for stopping by");
+  </script>
+</body>
+</html>
